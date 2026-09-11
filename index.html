@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Anytime</title>
+    <meta name="description"
+          content="Anytime official application">
+    <!-- ==============================
+         META PIXEL
+         ============================== -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {
+        if(f.fbq)return;
+        n=f.fbq=function(){
+            n.callMethod ?
+            n.callMethod.apply(n,arguments) :
+            n.queue.push(arguments)
+        };
+        if(!f._fbq)f._fbq=n;
+        n.push=n;
+        n.loaded=!0;
+        n.version='2.0';
+        n.queue=[];
+        t=b.createElement(e);
+        t.async=!0;
+        t.src=v;
+        s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s);
+    }(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+    );
+    /*
+      Aapke screenshot ka Dataset ID
+      Agar Meta Settings me alag Pixel ID mile,
+      to is ID ko usse replace karein.
+    */
+    fbq('init', '28369401826030442');
+    /* PAGE VIEW */
+    fbq('track', 'PageView');
+    </script>
+    <!-- Meta Pixel noscript -->
+    <noscript>
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=28369401826030442&ev=PageView&noscript=1"
+            alt=""
+        >
+    </noscript>
+    <!-- ==============================
+         FONT AWESOME
+         ============================== -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+    <!-- ==============================
+         CSS
+         ============================== -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff7d6,
+                    #ffffff,
+                    #fff0b8
+                );
+            color: #222;
+        }
+        /* =========================
+           NAVBAR
+           ========================= */
+        .navbar {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            background: #ffffff;
+            box-shadow:
+                0 2px 12px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        /* =========================
+           LOGO
+           ========================= */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background:
+                linear-gradient(
+                    135deg,
+                    #f6c400,
+                    #ff7a00
+                );
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .logo-text {
+            font-size: 25px;
+            font-weight: 800;
+            color: #222;
+        }
+        .logo-text span {
+            color: #e00000;
+        }
+        /* =========================
+           MENU
+           ========================= */
+        .menu-btn {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: #f5f5f5;
+            font-size: 20px;
+        }
+        /* =========================
+           MAIN
+           ========================= */
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+        /* =========================
+           CARD
+           ========================= */
+        .card {
+            width: 100%;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 22px;
+            text-align: center;
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.10);
+        }
+        /* =========================
+           IMAGE
+           ========================= */
+        .model-img {
+            display: block;
+            width: 100%;
+            max-height: 650px;
+            object-fit: cover;
+            border-radius: 17px;
+            margin-bottom: 18px;
+        }
+        /* =========================
+           BUTTON
+           ========================= */
+        .btn {
+            width: 100%;
+            min-height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 13px;
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 700;
+            color: #ffffff;
+            background:
+                linear-gradient(
+                    135deg,
+                    #e90000,
+                    #ff9500
+                );
+            box-shadow:
+                0 6px 18px rgba(220,0,0,0.20);
+            transition: 0.2s;
+        }
+        .btn:hover {
+            opacity: 0.90;
+        }
+        .btn:active {
+            transform: scale(0.97);
+        }
+        .btn i {
+            font-size: 20px;
+        }
+        /* =========================
+           FOOTER
+           ========================= */
+        .footer {
+            text-align: center;
+            padding: 20px 15px 35px;
+            color: #888;
+            font-size: 12px;
+        }
+        /* =========================
+           MOBILE
+           ========================= */
+        @media (max-width: 480px) {
+            .navbar {
+                height: 64px;
+                padding: 0 15px;
+            }
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+            }
+            .logo-text {
+                font-size: 23px;
+            }
+            .container {
+                margin-top: 18px;
+            }
+            .card {
+                padding: 12px;
+                border-radius: 18px;
+            }
+            .btn {
+                min-height: 54px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ==============================
+         NAVBAR
+         ============================== -->
+    <div class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="logo-text">
+                Any<span>time</span>
+            </div>
+        </div>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <!-- ==============================
+         MAIN CONTENT
+         ============================== -->
+    <div class="container">
+        <div class="card">
+            <!-- IMAGE -->
+            <img
+                src="https://i.ibb.co/6JnPbTJH/919ea46c1d47adcc3b910c7b11e8e980-removebg-preview.png"
+                class="model-img"
+                alt="Anytime"
+            >
+            <!-- ==========================
+                 APK DOWNLOAD
+                 ========================== -->
+            <a
+                href="https://github.com/telegrowweb-web/apkone34x/raw/refs/heads/main/Anytime-Matka-1.0-release-1.apk"
+                class="btn"
+                download
+                onclick="trackDownload(event)"
+            >
+                <i class="fas fa-download"></i>
+                Download APK
+            </a>
+        </div>
+    </div>
+    <!-- ==============================
+         FOOTER
+         ============================== -->
+    <div class="footer">
+        © 2026 Anytime. All rights reserved.
+    </div>
+    <!-- ==============================
+         EVENT FUNCTIONS
+         ============================== -->
+    <script>
+        /*
+         ==========================================
+         APK DOWNLOAD
+         Download button click par:
+         Subscribe event fire hoga.
+         ==========================================
+        */
+        function trackDownload(event) {
+            if (typeof fbq === 'function') {
+             fbq(
+                    'track',
+                  'Subscribe',
+                    {
+                        content_name: 'Anytime APK Download',
+                        content_type: 'application'
+                    }
+                );
+            }
+            /*
+             Download ko normal tarike se
+             continue hone dete hain.
+            */
+            return true;
+        }
+    </script>
+</body>
+
+</html>
